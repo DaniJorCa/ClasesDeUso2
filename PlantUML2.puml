@@ -65,7 +65,7 @@ n1 <.. n2 : <<extend>>
 
 //Herencia
 
-@startuml
+
 
 :Agente: as a1
 
@@ -78,4 +78,18 @@ a1 -> sol1
 sol1 <|-- sol2
 sol1 <|-- sol3
 
+//Herencia2
+@startuml
+:Cliente Bancario: as c1
+:Cliente corporativo: as c2
+:Cliente Normal: as c3
+
+note "Actor antecesor" as not1
+note "Actor descendiente" as not2
+
+not1 -> c1
+not2 <- c3
+
+c1 <|-- c2
+c1 <|-- c3
 @enduml
