@@ -120,11 +120,30 @@ a1 -left-> et8
 a1 -left-> et9
 }
 
+//Diagrama estructurado
 
+@startuml
 
+left to right direction
+:Empleado: as e1
+(Alta Cliente) as et1
+(Introducir pedido) as et2
+(Obtener estado pedido) as et3
+(Cancelar pedido) as et4
+(Buscar pedido) as et7
+e1 -right-> et1
+e1 -right-> et2
+e1 -right-> et3
+e1 -right-> et4
+e1 -right-> et7
+(Buscar cliente) as et5
+(Pago en cuenta) as et6
 
-
-
-
-
+(Pago con tarjeta) as et8
+et1 ..> et2 : extiende
+et5 <.. et2 : incluye
+et3 ..> et7 : incluye
+et4 ..> et7 : incluye
+et6 ..> et2 : extiende
+et8 ..> et2 : extiende
 @enduml
