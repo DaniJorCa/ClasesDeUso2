@@ -21,8 +21,8 @@ note "Entorno del sistema" as n2
 n1 --> Sistema
 n2 --> Sistema
 
+//Caso Biblioteca
 
-@startuml
 :Socio: as s1
 :Bibliotecario: as b1
 
@@ -38,4 +38,16 @@ s1 -> dev1
 b1 --> p1
 b1 -> act1
 }
+
+// Caso Inclusión
+
+@startuml
+
+:Bibliotecario: as b1
+
+b1 -> (Baja socio)
+
+(Baja socio) ..> (Buscar socio) : <<include>>
+
+
 @enduml
