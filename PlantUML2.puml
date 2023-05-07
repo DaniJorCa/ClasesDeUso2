@@ -1,0 +1,21 @@
+@startuml
+
+:Actor: as a1
+:Actor\n: as a2
+
+
+
+Rectangle Sistema{
+a1 -> (Caso de uso)
+a1 --> (Caso de uso\n)
+a1 -> (Caso de uso\n\n)
+a2 --> (Caso de uso)
+a2 --> (Caso de uso\n\n)
+}
+
+note "comunicacion" as n1
+note "Entorno del sistema" as n2
+
+n1 --> Sistema
+n2 --> Sistema
+@enduml
