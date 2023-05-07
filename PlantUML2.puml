@@ -41,13 +41,27 @@ b1 -> act1
 
 // Caso Inclusión
 
-@startuml
+
 
 :Bibliotecario: as b1
 
 b1 -> (Baja socio)
 
 (Baja socio) ..> (Buscar socio) : <<include>>
+
+//Caso Extension
+
+@startuml
+
+:Agente: as a1
+
+(evaluar solicitud de Crédito) as n1
+
+a1 <- n1
+
+(solicitar información adicional al cliente) as n2
+
+n1 <.. n2 : <<extend>>
 
 
 @enduml
