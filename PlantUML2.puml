@@ -1,5 +1,7 @@
 @startuml
 
+//Caso a1
+
 :Actor: as a1
 :Actor\n: as a2
 
@@ -18,4 +20,22 @@ note "Entorno del sistema" as n2
 
 n1 --> Sistema
 n2 --> Sistema
+
+
+@startuml
+:Socio: as s1
+:Bibliotecario: as b1
+
+rectangle Biblioteca{
+(Reservar libro) as r1
+(Prestar libro) as p1
+(Devolver libro) as dev1
+(Actualizar catálogo) as act1
+
+s1 --> r1
+s1 --> p1
+s1 -> dev1
+b1 --> p1
+b1 -> act1
+}
 @enduml
