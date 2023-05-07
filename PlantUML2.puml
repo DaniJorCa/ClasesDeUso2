@@ -79,7 +79,7 @@ sol1 <|-- sol2
 sol1 <|-- sol3
 
 //Herencia2
-@startuml
+
 :Cliente Bancario: as c1
 :Cliente corporativo: as c2
 :Cliente Normal: as c3
@@ -92,4 +92,39 @@ not2 <- c3
 
 c1 <|-- c2
 c1 <|-- c3
+
+//Diagrama Inicial
+@startuml
+
+left to right direction
+:Empleado: as e1
+:Administrador: as a1
+Rectangle Empresa\nPedidos{
+(Introducir pedido) as et1
+(Cancelar pedido) as et2
+(Obtener estado pedido) as et3
+(Borrar pedido) as et4
+(Buscar pedidos) as et5
+(Alta cliente) as et6
+(Buscar cliente) as et7
+(Nuevo producto) as et8
+(Borrar producto) as et9
+e1 --> et1
+e1 --> et2
+e1 --> et3
+e1 --> et4
+e1 --> et5
+e1 --> et6
+e1 --> et7
+a1 -left-> et8
+a1 -left-> et9
+}
+
+
+
+
+
+
+
+
 @enduml
