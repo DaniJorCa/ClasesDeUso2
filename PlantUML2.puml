@@ -51,7 +51,7 @@ b1 -> (Baja socio)
 
 //Caso Extension
 
-@startuml
+
 
 :Agente: as a1
 
@@ -63,5 +63,19 @@ a1 <- n1
 
 n1 <.. n2 : <<extend>>
 
+//Herencia
+
+@startuml
+
+:Agente: as a1
+
+(enviar solicitud crédito) as sol1
+(enviar solicitud de crédito personal) as sol2
+(enviar solicitud de crédto empresarial) as sol3
+
+a1 -> sol1
+
+sol1 <|-- sol2
+sol1 <|-- sol3
 
 @enduml
